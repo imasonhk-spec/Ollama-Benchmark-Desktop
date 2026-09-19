@@ -1,0 +1,33 @@
+appId: com.mingsong.ollama-benchmark
+productName: Ollama Benchmark_V2.5
+asar: true
+
+# Skip rebuilding optional native modules (keytar/cpu-features) — the app does not
+# use electron safeStorage, and rebuilding hangs on network in restricted environments.
+npmRebuild: false
+nodeGypRebuild: false
+
+directories:
+  # 输出重定向到 D:（C: 仅剩 ~269MB 且无法释放，所有大目录均硬链接到 node_modules）
+  output: D:/ob-out
+
+files:
+  - out/**/*
+  - package.json
+
+win:
+  executableName: Ollama Benchmark_V2.5
+  target:
+    - target: nsis
+      arch:
+        - x64
+  artifactName: Ollama Benchmark_V2.5-Setup.${ext}
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  perMachine: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Ollama Benchmark_V2.5
+  include: build/installer.nsh

@@ -1,0 +1,43 @@
+!macro customInstall
+  ; Remove legacy versioned executable and shortcuts so an upgrade cannot launch V1.1/V1.2/V1.3/V1.4.
+  Delete "$INSTDIR\Ollama Benchmark_V1.1.exe"
+  Delete "$INSTDIR\Ollama Benchmark_V1.2.exe"
+  Delete "$INSTDIR\Ollama Benchmark_V1.3.exe"
+  Delete "$INSTDIR\Ollama Benchmark_V1.4.exe"
+  Delete "$DESKTOP\Ollama Benchmark_V1.1.lnk"
+  Delete "$DESKTOP\Ollama Benchmark_V1.2.lnk"
+  Delete "$DESKTOP\Ollama Benchmark_V1.3.lnk"
+  Delete "$DESKTOP\Ollama Benchmark_V1.4.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V1.1.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V1.2.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V1.3.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V1.4.lnk"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V1.1"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V1.2"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V1.3"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V1.4"
+  ; Remove the previous V2.0 build so a V2.0 -> V2.1 upgrade does not leave a stale executable behind.
+  Delete "$INSTDIR\Ollama Benchmark_V2.0.exe"
+  Delete "$DESKTOP\Ollama Benchmark_V2.0.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V2.0.lnk"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V2.0"
+  ; Remove the previous V2.1 / V2.2 builds so an upgrade does not leave a stale executable behind.
+  Delete "$INSTDIR\Ollama Benchmark_V2.1.exe"
+  Delete "$INSTDIR\Ollama Benchmark_V2.2.exe"
+  Delete "$DESKTOP\Ollama Benchmark_V2.1.lnk"
+  Delete "$DESKTOP\Ollama Benchmark_V2.2.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V2.1.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V2.2.lnk"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V2.1"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V2.2"
+  ; Remove the previous V2.3 build (V2.3 -> V2.4 upgrade).
+  Delete "$INSTDIR\Ollama Benchmark_V2.3.exe"
+  Delete "$DESKTOP\Ollama Benchmark_V2.3.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V2.3.lnk"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V2.3"
+  ; Remove the previous V2.4 build (V2.4 -> V2.5 upgrade).
+  Delete "$INSTDIR\Ollama Benchmark_V2.4.exe"
+  Delete "$DESKTOP\Ollama Benchmark_V2.4.lnk"
+  Delete "$SMPROGRAMS\Ollama Benchmark_V2.4.lnk"
+  RMDir /r "$SMPROGRAMS\Ollama Benchmark_V2.4"
+!macroend

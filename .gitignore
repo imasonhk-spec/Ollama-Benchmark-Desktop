@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+dist/
+dist-v11*/
+prepackaged-v11/
+release/
+*.blockmap
+
+# electron-vite writes timestamped copies of its own config next to the original
+# (e.g. electron.vite.config.1789724878279.mjs) — keep electron.vite.config.ts only.
+electron.vite.config.[0-9]*.mjs
+
+# Installers and archives (large; distribute via Releases instead)
+*.exe
+*.rar
+*.msi
+
+# Binary workbook fixture. The JSON extracted from it (samples/office-bank-rows.json)
+# is what the regression tests read, so the repo is self-sufficient without this file.
+# Regenerate the JSON from your own workbook with: node scripts/extract-bank-rows.mjs
+samples/*.xlsx
+
+# Secrets and local state
+.env*
+*.log
+*.pem
+*.key
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
