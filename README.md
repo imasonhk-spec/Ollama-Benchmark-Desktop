@@ -7,6 +7,30 @@ All probing is **read-only**: the app never installs, starts, stops or reconfigu
 on the target machine. It reaches the inference API through an SSH tunnel, so no port has to
 be exposed to the public internet.
 
+## Download
+
+Prebuilt binaries are published on the [releases page](https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop/releases).
+
+Latest: **V2.5** — https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop/releases/tag/v2.5.0
+
+| Asset | What it is |
+| --- | --- |
+| `Ollama-Benchmark-V2.5-Setup.exe` | NSIS installer, Windows x64 (97.7 MB) |
+| `Ollama-Benchmark-Source-V2.5.zip` | Full source archive, posix paths (works with `unzip` on any OS) |
+| `SHA256SUMS-V2.5.txt` | Checksums for the two assets above |
+| `RELEASE-NOTES-V2.5.md` | Same notes as the release body, for offline reading |
+
+Verify a download before running it:
+
+```bash
+sha256sum -c SHA256SUMS-V2.5.txt
+```
+
+The installer is not code-signed, so Windows SmartScreen will warn on first run. The SHA256 of
+the installer is
+`5c7c6738779f774ad22a5d8a9c28af742516f0e8b840b0bf15bf99378a08b70b` — check it against the file
+you downloaded if the warning makes you uneasy.
+
 ## Inference backends (V2.5)
 
 The backend selector asks one protocol question, not which acceleration build you installed:

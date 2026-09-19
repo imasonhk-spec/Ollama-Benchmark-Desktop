@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/).
 
 ## [2.5.0] - 2026-09-19
 
+> 发布页 / 安装包下载：https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop/releases/tag/v2.5.0
+
 ### Changed
 
 - **推理后端改为「协议族」三选一** — 原来的「自动检测 / Ollama(ollama-rocm) / llama.cpp」

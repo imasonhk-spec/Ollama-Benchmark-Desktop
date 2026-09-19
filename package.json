@@ -8,6 +8,14 @@
     "name": "MingSong (明松)",
     "email": "mingsong@example.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop.git"
+  },
+  "homepage": "https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop#readme",
+  "bugs": {
+    "url": "https://github.com/imasonhk-spec/Ollama-Benchmark-Desktop/issues"
+  },
   "type": "module",
   "main": "out/main/main.js",
   "scripts": {
